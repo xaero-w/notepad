@@ -11,7 +11,9 @@ class Post
   end
 
   def to_string
-    # todo
+    time_string = "Создано: #{@created_at.strftime(%Y-%m-%d_%H-%M-%S)} \n\r \n\r"
+
+    return @text.unshift(time_string)
   end
 
   def save
